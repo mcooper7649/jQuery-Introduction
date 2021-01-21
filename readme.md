@@ -91,7 +91,8 @@
 
 
     3. Adding Event Listeners with jQuery
-        ```
+        
+       `` 
         $("h1").click(function(){  // Here is how we add a click event 
             $("h1").css("color", "purple")  // Inside the anonymous function we add more jQuery to change the css color to purple
         })
@@ -111,9 +112,69 @@
         })
 
 
+        $("h1").on("mouseover", function(){   // This is the ON method. on "mouseover" is call and css styles is changed. Can be used with any event
+            $("h1").css("color", "purple")
+        })
+        ``
+
     4. Adding/Removing Elements with jQuery
 
+        $("h1").before("<button>New</button>);  // This is how you would add a NEW button BEFORE the h1 element
+
+        $("h1").after("<button>New</button>);  // Create an element AFTER the h1
+
+        $("h1").prepend("<button>New</button>); // Adds New Button Element inside the h1 tag, after the opening tag but before the content of the h1.
+        $("h1").append("<button>New</button>);  // Adds New Button Element inside the h1 tag, before the closing tag but after the content of the h1.
+
+        $("button").remove(); // This removes all buttons
+
     5. Website Animations with jQuery
+
+        [jQuery Animate Effects](https://api.jquery.com/category/effects)
+
+
+        ```
+
+        $("button").on("click", function(){  // onClick of any button, hide all h1 tags.
+            $("h1").hide();
+        })
+        $("button").on("click", function(){  // onClick of any button, show all h1 tags.
+            $("h1").show();
+        })
+        $("button").on("click", function(){  // onClick of any button, toggle hide all h1 tags.
+            $("h1").toggle();
+        })
+
+        $("button").on("click", function(){  // onClick of any button, fadeOut or reduce the opacity of all h1 tags.
+            $("h1").fadeOut();
+        })
+
+        $("button").on("click", function(){  // onClick of any button, fadein or increase the opacity of all h1 tags.
+            $("h1").fadeIn();
+        })
+        $("button").on("click", function(){  // onClick of any button, toggle fade or reduce the opacity of all h1 tags.
+            $("h1").fadeToggle();
+        })
+        $("button").on("click", function(){  // onClick of any button, slide the element from the bottom.
+            $("h1").slideUp();
+        })
+        $("button").on("click", function(){  // onClick of any button, slide the element from the top.
+            $("h1").slideDown();
+        })
+        $("button").on("click", function(){  // onClick of any button, slide toggle.
+            $("h1").slideToggle();
+        })
+
+        $("button").on("click", function(){  // onClick of any button, applies the custom css properties specified
+            $("h1").animate({opacity: 0.5}); // Numeric Values for properties; color: red; wouldn't work because it doesn't know how to animate that
+        })
+        $("button").on("click", function(){  // onClick of any button, increase  the margin of all h1 tags.
+            $("h1").animate({margin: "30%"});
+        })
+        $("button").on("click", function(){  // onClick of any button, we have Chained Animations, the h1, slides up, then down, then animates the opacity.
+            $("h1").slideUp().slideDown().animate({opacity: 0.5})
+        })
+
 
 ## jQuery Challenge 1
 ---
