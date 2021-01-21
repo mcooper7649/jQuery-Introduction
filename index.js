@@ -1,0 +1,1 @@
+$("h1").css("color", "blue")    //this is jQuery to change our h1 to red
