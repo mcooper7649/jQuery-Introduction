@@ -180,3 +180,62 @@
 ---
 
 1. Using jQuery, change the h1 tag to display the character pressed on the screen.
+
+
+## jQuery Simon Game
+---
+Step 1 - Create the Local JS files and CDN
+* See parent directory for Simon Working Folder.
+
+Our game logic will be created inside an external Javascript file.
+
+1. Create a new file called game.js
+
+2. Link to this new external JS file from your index.html
+
+3. Add an alert to game.js and test that the alert gets triggered when you load up index.html in Chromels
+
+Step 2 - Create A New Pattern
+1. Inside game.js create a new function called nextSequence()
+
+2. Inside the new function generate a new random number between 0 and 3, and store it in a variable called randomNumber
+
+You can use the Chrome console to verify that your code creates random numbers between the correct range.
+
+
+3. At the top of the game.js file, create a new array called buttonColours and set it to hold the sequence "red", "blue", "green", "yellow" .
+
+4. Create a new variable called randomChosenColour and use the randomNumber from step 2 to select a random colour from the buttonColours array.
+
+5. At the top of the game.js file, create a new empty array called gamePattern.
+
+6. Add the new randomChosenColour generated in step 4 to the end of the gamePattern.
+
+Step 3 - Show the Sequence to the User with Animations and Sounds
+1. Use jQuery to select the button with the same id as the randomChosenColour
+
+2. Use Google/Stackoverflow to figure out how you can use jQuery to animate a flash to the button selected in step 1.
+
+You should end up with an effect like this:
+
+
+3. Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.
+
+
+Note: If you need any hints, try scrolling down. 👇
+
+
+
+Hint 1. Remember that to select ids with jQuery you need the "#" symbol.
+
+https://api.jquery.com/id-selector/
+
+Hint 2. https://www.google.co.uk/search?q=animate+flash+jQuery
+
+Hint 3. https://www.google.co.uk/search?q=play+sound+javascript
+
+
+[Want to Play the Game?| Original](https://londonappbrewery.github.io/Simon-Game/) 
+[Want to Play the Game?| Cooper's Copy](https://tender-shannon-6091f8.netlify.app/)
+[Link to Repo](https://mcooper7649.github.io/Simon-Game)
+
